@@ -39,29 +39,29 @@ const habisDibagi = () => {
 </script>
 
 <template>
-  <div class="center_block">
-    <h1>{{ tulisan }}</h1>
-    <h2 v-if="nama">Nama programmer: {{ nama }} <button @click="changeName">change</button></h2>
+  <div class="container">
+    <h1 class="text-bg-info mb-4">{{ tulisan }}</h1>
+    <h4 v-if="nama" class="mb-1">Nama programmer: {{ nama }} <button @click="changeName" class="btn btn-outline-secondary rounded btn-sm">change</button></h4>
     <div v-else>
-      <input type="text" v-model="inputName" placeholder="Enter your name">
-      <button @click="submitName">Submit</button>
+      <input type="text" v-model="inputName" class="form-text me-2" placeholder="Enter your name">
+      <button @click="submitName" class="btn btn-outline-info rounded btn-sm">Submit</button>
     </div>
-    <div class="gapclass">
-      <label for="angka1">Masukkan angka1: </label>
-      <input type="text" name="angka1" id="angka1" v-model="angka1"><br>
-    </div>
-
-    <div>
-      <label for="angka2">Masukkan angka2: </label>
-      <input type="text" name="angka2" id="angka2" v-model="angka2"><br>
+    <div class="form">
+      <label for="angka1" class="pe-2 form-label ">Masukkan angka1: </label>
+      <input type="text" name="angka1" id="angka1" class="form-text rounded" v-model="angka1"><br>
     </div>
 
     <div>
-      <button type="button" @click="jumlahkan">Jumlahkan</button>
-      <button type="button" @click="perkalian">perkalian</button>
-      <button type="button" @click="pembagian">pembagian</button>
-      <button type="button" @click="habisDibagi">habisDibagi</button>
-      <button type="button" @click="pengurangan">pengurangan</button>
+      <label for="angka2" class="pe-2 form-label">Masukkan angka2: </label>
+      <input type="text" name="angka2" class="form-text rounded" id="angka2" v-model="angka2"><br>
+    </div>
+
+    <div>
+      <button type="button" class="btn btn-outline-primary btn-sm m-1" @click="jumlahkan">Jumlahkan</button>
+      <button type="button" class="btn btn-outline-primary btn-sm m-1" @click="perkalian">perkalian</button>
+      <button type="button" class="btn btn-outline-primary btn-sm m-1" @click="pembagian">pembagian</button>
+      <button type="button" class="btn btn-outline-primary btn-sm m-1" @click="habisDibagi">habisDibagi</button>
+      <button type="button" class="btn btn-outline-primary btn-sm m-1" @click="pengurangan">pengurangan</button>
     </div>
 
     <div>
@@ -71,16 +71,4 @@ const habisDibagi = () => {
 </template>
 
 <style scoped>
-.center_block {
-  justify-content: center;
-  align-items: center;
-}
-
-.gapclass {
-  gap: 1rem;
-}
-
-#angka1 {
-  padding-left: initial;
-}
 </style>
